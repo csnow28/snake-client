@@ -10,16 +10,18 @@ const connect = function () {
 // interpret incoming data as text
 conn.setEncoding("utf8");
 
+// successful connection anon. function
+conn.on("connect", () => {
+  console.log("Connected!");
+});
+
+// adding a timeOut if a user idles without inputting anything
 const timedOut = () => {
   console.log("you ded cuz you idled");
   conn.end();
 };
 
 let timeOutNum = setTimeout(timedOut, 2000);
-
-conn.on("connect", () => {
-  console.log("Connected!");
-});
 
 return conn;
 };
