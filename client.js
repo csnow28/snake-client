@@ -9,9 +9,12 @@ const connect = function () {
 // interpret incoming data as text
 conn.setEncoding("utf8");
 
+const name = process.argv.slice(2);
 // successful connection anon. function
 conn.on("connect", () => {
-  console.log("Connected!");
+  console.log("Connected!")
+  conn.write("Name: CDS");
+//  conn.write("Move: up");
 });
 
 // adding a timeOut if a user idles without inputting anything
