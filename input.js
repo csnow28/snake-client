@@ -23,6 +23,14 @@ if (key === 's')
   connection.write("Move: down");
 if (key === 'd')
   connection.write("Move: right");
+if (key === "h")
+  connection.write("Say: hek");
+if (key === "y")
+  connection.write("Say: yis");
+if (key === "n")
+  connection.write("Say: noo");
+if (key === "k")
+  connection.write("Say: kek");
 }
 
 module.exports = { setupInput }
