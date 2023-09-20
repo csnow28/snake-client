@@ -14,16 +14,19 @@ const name = process.argv.slice(2);
 conn.on("connect", () => {
   console.log("Connected!")
   conn.write("Name: CDS");
-//  conn.write("Move: up");
+});
+
+conn.on("data", (data) => {
+  console.log(data)
 });
 
 // adding a timeOut if a user idles without inputting anything
-const timedOut = () => {
-  console.log("you ded cuz you idled");
-  conn.end();
-};
+//const timedOut = () => {
+//  console.log("you ded cuz you idled");
+//  conn.end();
+//};
 
-let timeOutNum = setTimeout(timedOut, 2000);
+//let timeOutNum = setTimeout(timedOut, 2000);
 
 return conn;
   }
