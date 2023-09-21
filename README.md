@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["a GIF of the game being played](https://share.zight.com/qGuYgG9B)
+![a GIF of the game being played](https://share.zight.com/qGuYgG9B)
 
 ## Getting Started
 
