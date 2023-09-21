@@ -1,34 +1,28 @@
+// this file contains initial configurations and the connection function
 const net = require("net");
-// establishes a connection with the game server
-const connect = function () {
+const {IP, PORT} = require("./constants");
+
+// establishes a connection with the game server, and allows proper display of name
+const connect = function() {
+  const name = process.argv.slice(2);
   const conn = net.createConnection({
-    host: "localhost",
-    port: 50541
-    });
+    host: IP,
+    port: PORT
+  });
 
-// interpret incoming data as text
-conn.setEncoding("utf8");
+  // interpret incoming data as text
+  conn.setEncoding("utf8");
 
-const name = process.argv.slice(2);
-// successful connection anon. function
-conn.on("connect", () => {
-  console.log("Connected!")
-  conn.write("Name: CDS");
-});
+  conn.on("connect", () => {
+    console.log("Connected!");
+    conn.write(`Name: ${name}`);
+  });
 
-conn.on("data", (data) => {
-  console.log(data)
-});
+  conn.on("data", (data) => {
+    console.log(data);
+  });
 
-// adding a timeOut if a user idles without inputting anything
-//const timedOut = () => {
-//  console.log("you ded cuz you idled");
-//  conn.end();
-//};
+  return conn;
+};
 
-//let timeOutNum = setTimeout(timedOut, 2000);
-
-return conn;
-  }
-
-module.exports = { connect }
+module.exports = { connect };
