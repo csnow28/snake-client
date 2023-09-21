@@ -2,7 +2,7 @@
 const net = require("net");
 const {IP, PORT} = require("./constants");
 
-// establishes a connection with the game server, and allows proper display of name
+// establishes a connection with the game server
 const connect = function() {
   const name = process.argv.slice(2);
   const conn = net.createConnection({
