@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-![a GIF of the game being played](https://share.zight.com/qGuYgG9B)
+!['"hek" says the snake as it moves toward some food'](https://share.zight.com/7KuXxd5N)
 
 ## Getting Started
 
