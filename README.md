@@ -8,9 +8,12 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!['"hek" says the snake as it moves toward some food'](https://share.zight.com/7KuXxd5N)
+![snek GIF!](https://github.com/csnow28/snake-client/assets/67972392/e1c026cb-e764-4502-a314-f5782d5bddff)
+!["hek" says the snek as it moves toward some food](https://github.com/csnow28/snake-client/assets/67972392/ea8f2d70-d864-429c-a247-23ad1ad56b42)
+
 
 ## Getting Started
+
 
 - Follow steps inside the snek server repo to run the server side
 - Run the development snake client using the `node play.js` command.
